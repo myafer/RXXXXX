@@ -43,7 +43,7 @@ public class RXXNetWorking<Target:TargetType> {
     
 }
 extension RXXNetWorking {
-    public func requestJSON(target: Target) -> Observable<HTTPURLResponse> {
+    public func requestJSON(target: Target) -> Observable<Any> {
         
         return Observable.create({ (observer) -> Disposable in//创建信号源
             let request = EndPoint<Target>().request(target: target)//返回Alamofire.Request类型
@@ -52,7 +52,7 @@ extension RXXNetWorking {
                 if let error = response.result.error {
                     observer.onError(error)
                 } else {
-                    observer.onNext(response as Any as! HTTPURLResponse)
+                    observer.onNext(response.result)
                     observer.onCompleted()
                 }
             }

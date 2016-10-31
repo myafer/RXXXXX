@@ -11,9 +11,16 @@ import RxSwift
 
 class ViewController: UIViewController {
 
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        RXXNetWorking.requestJSON()
+        JokeTypeProvider.requestJSON(target: .JokeType)
+            .subscribe { re in
+            
+                print(re)
+            }
+            .addDisposableTo(disposeBag)
     }
 
 
