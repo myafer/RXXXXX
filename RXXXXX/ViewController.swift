@@ -8,20 +8,34 @@
 
 import UIKit
 import RxSwift
+import Alamofire
 
 class ViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        JokeTypeProvider.requestJSON(target: .JokeType)
-            .subscribe { re in
-            
-                print(re)
-            }
-            .addDisposableTo(disposeBag)
-    }
+//    let disposeBag = DisposeBag()
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        
+//        JokeTypeProvider.requestJSON(target: .JokeType)
+//            .subscribe { re in
+//                print(re)
+//            }
+//            .addDisposableTo(disposeBag)
+        
+//        Alamofire.request("https://httpbin.org/get").responseJSON { response in
+//            print(response.request)  // original URL request
+//            print(response.response) // HTTP URL response
+//            print(response.data)     // server data
+//            print(response.result)   // result of response serialization
+//            
+//            if let JSON = response.result.value {
+//                print("JSON: \(JSON)")
+//            }
+//        }
+        
+//    }
 
 
 

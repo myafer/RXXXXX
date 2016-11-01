@@ -14,6 +14,7 @@
 		42B34A9E1DC7115400B0B212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B34A9C1DC7115400B0B212 /* LaunchScreen.storyboard */; };
 		42B34AA61DC71B6C00B0B212 /* RXXNetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B34AA51DC71B6C00B0B212 /* RXXNetWorking.swift */; };
 		42B34AA91DC725D900B0B212 /* JokeTypeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B34AA81DC725D900B0B212 /* JokeTypeAPI.swift */; };
+		42FCCDB41DC8727900620AF2 /* MoyaTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FCCDB31DC8727900620AF2 /* MoyaTest.swift */; };
 		707A7F2856A834DC272E6C64 /* Pods_RXXXXX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C0FC5C9EB8F48F1C183EF1 /* Pods_RXXXXX.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		42B34A9F1DC7115400B0B212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42B34AA51DC71B6C00B0B212 /* RXXNetWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXXNetWorking.swift; sourceTree = "<group>"; };
 		42B34AA81DC725D900B0B212 /* JokeTypeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeTypeAPI.swift; sourceTree = "<group>"; };
+		42FCCDB31DC8727900620AF2 /* MoyaTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaTest.swift; sourceTree = "<group>"; };
 		4B4EAEC0808AD00E15F5E956 /* Pods-RXXXXX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXXXXX.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXXXXX/Pods-RXXXXX.release.xcconfig"; sourceTree = "<group>"; };
 		529C6E404E8F501EDC8FE544 /* Pods-RXXXXX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXXXXX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXXXXX/Pods-RXXXXX.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C0FC5C9EB8F48F1C183EF1 /* Pods_RXXXXX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXXXXX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				42B34A9F1DC7115400B0B212 /* Info.plist */,
 				42B34AA51DC71B6C00B0B212 /* RXXNetWorking.swift */,
 				42B34AA81DC725D900B0B212 /* JokeTypeAPI.swift */,
+				42FCCDB31DC8727900620AF2 /* MoyaTest.swift */,
 			);
 			path = RXXXXX;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				42B34A961DC7115300B0B212 /* ViewController.swift in Sources */,
 				42B34AA91DC725D900B0B212 /* JokeTypeAPI.swift in Sources */,
 				42B34AA61DC71B6C00B0B212 /* RXXNetWorking.swift in Sources */,
+				42FCCDB41DC8727900620AF2 /* MoyaTest.swift in Sources */,
 				42B34A941DC7115300B0B212 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
