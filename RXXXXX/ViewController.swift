@@ -12,32 +12,33 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-//    let disposeBag = DisposeBag()
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        
-//        JokeTypeProvider.requestJSON(target: .JokeType)
-//            .subscribe { re in
-//                print(re)
-//            }
-//            .addDisposableTo(disposeBag)
-        
-//        Alamofire.request("https://httpbin.org/get").responseJSON { response in
-//            print(response.request)  // original URL request
-//            print(response.response) // HTTP URL response
-//            print(response.data)     // server data
-//            print(response.result)   // result of response serialization
-//            
-//            if let JSON = response.result.value {
-//                print("JSON: \(JSON)")
-//            }
-//        }
-        
-//    }
+    let disposeBag = DisposeBag()
+    
+    let label = UILabel(frame: CGRect(x: 20, y: 100, width: 200, height: 20))
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        for _ in 0...0 {
+            req()
+        }
+        self.view.addSubview(label)
+    }
+    
+    func req() {
+        Cancelable
+        XXProvider.request(<#T##target: XXX##XXX#>, completion: <#T##Completion##Completion##(Result<Response, Error>) -> ()#>)
+        XXProvider.request(.One) { result in
+            if case let .success(response) = result {
+                let model = IPModel(info: response.mapJSONDictionary()!)
+                self.label.text = model.arg1
+                print(model)
+            }
+            if case let .failure(error) = result {
+                print(error)
+            }
+        }
 
-
+    }
+    
 }
 
