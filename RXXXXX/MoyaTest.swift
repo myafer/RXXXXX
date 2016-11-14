@@ -8,10 +8,11 @@
 
 import Foundation
 import Moya
+import RxSwift
 
 
 extension Response {
-    func mapJSONDictionary(failsOnEmptyData: Bool = true) -> [String: AnyObject]? {
+    public func mapJSONDictionary(failsOnEmptyData: Bool = true) -> [String: AnyObject]? {
         guard let dd = try? self.mapJSON(failsOnEmptyData: failsOnEmptyData) as? [String : AnyObject] else {
             return ["error": ("222" as Optional<AnyObject>)!]
         }
@@ -69,10 +70,31 @@ extension XXX: TargetType {
         return nil
     }
     public var sampleData: Data {
-        return "{\"origin\":null,\"arg1\":\"eee\"}".data(using: String.Encoding.utf8)!
+        return "{\"origin\":\"2222\",\"arg1\":\"eee\"}".data(using: String.Encoding.utf8)!
     }
     public var task: Task {
         return .request
     }
 
+}
+
+extension XXX {
+     func requestt() ->  Observable<IPModel> {
+        return Observable.create({ (observer) -> Disposable in
+            
+            let cancelable = XXProvider.request(.One, completion: { (result) in
+                if case let .success(response) = result {
+                    observer.onNext(response.JSONModel())
+                    observer.onCompleted()
+                }
+                if case let .failure(error) = result {
+                    observer.onError(error)
+                }
+            })
+            
+            return Disposables.create {
+                cancelable.cancel()
+            }
+        })
+    }
 }

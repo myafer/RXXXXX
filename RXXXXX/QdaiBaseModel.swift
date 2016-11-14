@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class QdaiBaseModel: NSObject {
+public class QdaiBaseModel: NSObject {
     
     var selfDic: [String: AnyObject?]?
     
@@ -46,7 +46,7 @@ class QdaiBaseModel: NSObject {
         return mdic
     }
     
-    override var description: String {
+    override public var description: String {
         var restr =     "##############  \(type(of: self)) description ###############\n"
         for p in mirror.children {
             restr = restr + "\(p.label!)    = \(p.value)\n"    + "----------------------\n"

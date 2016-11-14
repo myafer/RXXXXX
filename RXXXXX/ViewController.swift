@@ -3,7 +3,7 @@
 //  RXXXXX
 //
 //  Created by 口贷网 on 16/10/31.
-//  Copyright © 2016年 Afer. All rights reserved.
+//  Copyright ©©©©©©© 2016年 ©©©©©©©©©©© Afer. All rights reserved.
 //
 
 import UIKit
@@ -25,20 +25,25 @@ class ViewController: UIViewController {
     }
     
     func req() {
-        Cancelable
-        XXProvider.request(<#T##target: XXX##XXX#>, completion: <#T##Completion##Completion##(Result<Response, Error>) -> ()#>)
-        XXProvider.request(.One) { result in
-            if case let .success(response) = result {
-                let model = IPModel(info: response.mapJSONDictionary()!)
-                self.label.text = model.arg1
-                print(model)
-            }
-            if case let .failure(error) = result {
-                print(error)
-            }
-        }
+        
+        XXX.requestt(.One)().subscribe { (event) in
+                print(event.element)
+        }.addDisposableTo(disposeBag)
+        
+        //        XXProvider.request(.One) { result in
+//            if case let .success(response) = result {
+//                let model = IPModel(info: response.mapJSONDictionary()!)
+//                self.label.text = model.arg1
+//                print(model)
+//            }
+//            if case let .failure(error) = result {
+//                print(error)
+//            }
+//        }
 
     }
+    
+    
     
 }
 
